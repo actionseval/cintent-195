@@ -41,9 +41,6 @@ jobs:
       - name: Checkout the code
         uses: actions/checkout@v4
 
-      # CINTENT >> INSERT_CINTENT
-      - uses: JavidDitty/setup-cintent@a606c80c34ec190c6a20dea33d6d58ddb6c4e0cc
-
       - name: Setup mamba
         uses: mamba-org/setup-micromamba@v2
         with:
@@ -54,6 +51,9 @@ jobs:
           create-args: >-
             python=${{ matrix.python-version }}
             pytorch=${{ matrix.pytorch-version }}
+      
+      # CINTENT >> INSERT_CINTENT
+      - uses: JavidDitty/setup-cintent@e3d420b9a40765f278d3651507e812014bfc7407
 
       - name: Install library
         run: python -m pip install --no-deps .
