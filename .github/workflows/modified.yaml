@@ -45,7 +45,7 @@ jobs:
         uses: mamba-org/setup-micromamba@v2
         with:
           environment-file: env.yml
-          # environment-name: my_env
+          environment-name: my_env
           # cache-environment: true
           # cache-downloads: true
           create-args: >-
